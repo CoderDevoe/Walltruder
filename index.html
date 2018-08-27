@@ -1,0 +1,105 @@
+<html>
+<head>
+  <title>Walltruder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Walltruder is a web app which uses wallpaper site's API to display beautiful wallpapers.">
+  <meta name="keywords" content="walltruder,wallpapers,alphacoders,unsplash,images,desktop,laptop,4k,hd">
+  <meta name="author" content="Devashish Sarmah">
+  <link rel="shortcut icon" type="image/png" href="assets/images/walltruder.png"/>
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="d-flex justify-content-between align-items-center">
+    <div class="logo d-flex align-items-center flex-grow-1">
+      <h1><span>W</span>all<span>Truder</span></h1>
+    </div>
+    <div class="d-flex justify-content-between search">
+      <i class="material-icons">search</i>
+      <input type="text" placeholder="Search for a wallpaper" size="80"/>
+      <a href="#"><i class="material-icons">chevron_right</i></a>
+    </div>
+    <nav class="navigation d-flex align-items-center flex-grow-1">
+      <ul class="nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Categories</a>
+          <div class="dropdown-menu category-menu"></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/CoderDevoe/Walltruder#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/CoderDevoe">Developer</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="#" class="menu" style="display:none;"><i class="material-icons">apps</i></a>
+  </header>
+    <!-- Main Content -->
+    <div class="container-fluid">
+      <div class="menu-options" hidden>
+        <ul>
+          <li><a href="#" class="btn"><i class="material-icons">assignment</i>Categories</a></li>
+          <li><a href="https://github.com/CoderDevoe/Walltruder#about" class="btn"><i class="material-icons">help</i>About</a></li>
+          <li><a href="https://github.com/CoderDevoe" class="btn"><i class="material-icons">code</i>Developer</a></li>
+        </ul>
+      </div>
+      <div class="menu-category menu-options" hidden>
+        <ul></ul>
+      </div>
+      <div class="navigation-control"><ul></ul></div>
+      <div class="heading">
+        <h2></h2>
+      </div>
+      <div class="filters d-flex justify-content-end"></div>
+        <div class="container-wallpapers">
+         <div class="col-wallpaper"></div>
+         <div class="col-wallpaper"></div>
+         <div class="col-wallpaper"></div>
+         <div class="col-wallpaper"></div>
+         <div class="loading-wallpapers">
+          <div>
+            <div>
+            </div>
+          </div>
+         </div>
+        </div>
+        <div class="scroll-toolbar" hidden>
+          <div class="logo-toolbar">
+            <h6><span>W</span>all<span>Truder</span></h6>
+          </div>
+            <ul>
+              <li class="scroll-toolbar-gototop">
+                <i class="material-icons">arrow_upward</i>
+                <h6>Top</h6>
+              </li>
+            </ul>
+        </div>
+        <!-- Wallpaper viewer part -->
+        <div class="overlay-wallviewer" hidden></div>
+        <div class="show-wallpaper" hidden>
+          <div class="show-wallpaper-header">
+            <a href="#"><i class="material-icons">arrow_back</i></a>
+          </div>
+          <div class="show-wallpaper-container">
+          <center>
+            <img src="#"/>
+          </center>
+          </div>
+        </div>
+    </div>
+  <!-- JS Files -->
+  <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/popper/popper.min.js"></script>
+  <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/js/header.js" type="module"></script>
+  <script src="assets/js/toolbar.js"></script>
+  <script src="assets/js/binder.js" type="module"></script>
+  <script src="assets/js/search.js" type="module"></script>
+  <script src="assets/js/filters.js" type="module"></script>
+</body>
+</html>

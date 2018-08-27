@@ -1,0 +1,530 @@
+/* Font Default : Roboto  */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+body{
+  background: #1A1A1D;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+
+header{
+  box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.12);
+  height: 64px;
+}
+
+/* Logo */
+.logo{
+  display: inline;
+  text-align: center;
+  margin-left: 20px;
+  height: 64px;
+  line-height: 64px;
+  justify-content: center;
+}
+
+.logo h1{
+  color: #C3073F;
+  display: inline;
+  font-size: 22px;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+.logo span:first-child{
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+}
+
+@media (max-width: 425px) {
+  .logo h1{
+    font-size: 15px;
+  }
+  .logo span:first-child{
+    font-size: 25px;
+  }
+}
+
+
+.logo span:last-child{
+  color: #FFFFFF;
+}
+
+.logo:hover{
+  cursor: pointer;
+}
+
+/* Search */
+.search{
+  padding: 10px;
+  background: #F5F5F5;
+  border-radius: 2px;
+  height: 48px;
+}
+
+.search i:first-child{
+  padding: 2.4px;
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.search i:last-child{
+  padding: 2.4px;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.search a{
+  transition: 1s;
+}
+
+.search a:hover{
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.20);
+  border-radius: 3px;
+}
+
+.search input[type="text"]{
+  border-style: none;
+  border-width: 0px;
+  padding: 5px;
+  background: transparent;
+  max-width: 720px;
+  margin-left: 8px;
+}
+
+.search input[type="text"]:focus{
+  border-style: none;
+  border-width: 0px;
+  outline-style: none;
+  outline-width: 0px;
+}
+
+@media (max-width: 1024px) {
+  .search{
+    width: 700px;
+  }
+  .search input{
+    width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search{
+    width: 460px;
+  }
+  .search input{
+    width: 360px;
+  }
+}
+
+@media (max-width: 425px) {
+  .search{
+    width: 220px;
+    margin-left: 10px;
+  }
+  .search input{
+    width: 100px;
+  }
+}
+
+/* Navigation */
+.navigation{
+  margin-right: 20px;
+  justify-content: center;
+}
+
+.navigation a{
+  color: #FFFFFF;
+}
+
+.category-menu{
+  background: #C3073F;
+  max-height: 412px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.menu{
+  color: #FFFFFF;
+  padding: 40px;
+}
+
+@media (max-width: 425px) {
+ .menu{
+   padding: 15px;
+ }
+}
+
+.menu:focus{
+  color: #FFFFFF;
+}
+
+.menu:hover{
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .navigation{
+    display: none !important;
+  }
+  .menu{
+    display: inline !important;
+  }
+}
+
+/* Header Styling Ends Here */
+
+/* Heading */
+
+.heading h2{
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+}
+
+/* Wallpapers */
+
+/* Wallpapers Container */
+.container-wallpapers{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  z-index: -1;
+}
+
+/* A Particular Wallpaper Column */
+.col-wallpaper{
+  width: 25%;
+}
+
+@media (max-width: 1024px) {
+  .col-wallpaper{
+    width: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .col-wallpaper{
+    width: 100%;
+  }
+}
+
+.main-wallpaper{
+  position: relative;
+  transition: 0.5s;
+  margin: 3px;
+  margin-left: 0;
+}
+
+.main-wallpaper:hover{
+  transform: scale(1.09);
+  z-index: 300;
+}
+
+.wallpaper-overlap{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.wallpaper-overlap:hover{
+    background: linear-gradient(180deg,rgba(0,0,0,.2) 0,transparent 40%,transparent 60%,rgba(0,0,0,.3));
+}
+
+@keyframes bounceIn {
+  0% {transform: scale(1.2)}
+  30% {transform: scale(1)}
+  50% {transform: scale(0.8)}
+  100% {transform: scale(1)}
+}
+.animate-bounce-in{
+  animation: bounceIn 1s ease-in 0s 1;
+}
+
+.wallpaper-overlap div{
+ display: none;
+ width: 100%;
+ margin: 0 4px;
+ justify-content: space-between;
+ z-index: -1;
+}
+
+.wallpaper-overlap div a:first-child{
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.wallpaper-overlap div a{
+  background: rgba(0,0,0,0.4);
+  padding: 0px 6px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+}
+
+.wallpaper-overlap div a:last-child{
+  color: #C3073F;
+}
+
+.wallpaper-overlap div a:hover{
+  text-decoration: none;
+}
+
+.container-wallpaper img{
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* Loading Wallpaper Text */
+.loading-wallpapers{
+  margin: auto;
+}
+
+.loading-wallpapers div{
+  display: inline-flex;
+  width: 100px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+@keyframes loader {
+  0%{left: -10px;}
+  100%{left: 100%;}
+}
+
+.loading-wallpapers div div{
+  width: 30px;
+  background: #C3073F;
+  position: absolute;
+  animation: loader 0.2s ease-in 0s infinite;
+}
+
+/* Wallpapers styling ends here */
+
+/* Scroll-Toolbar */
+
+/* Scroll-Toolbar Container */
+.scroll-toolbar{
+  display: inline-flex;
+  flex-direction: row;
+  background: rgba(26, 26, 29, 0.5);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 30%;
+  z-index: 10000;
+  align-items: center;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+/* Scroll-Toolbar Logo */
+.scroll-toolbar div.logo-toolbar h6{
+  color: #C3073F;
+  font-size: 16px;
+  margin: 5px 0 0 10px;
+  text-transform: uppercase;
+}
+
+.scroll-toolbar div.logo-toolbar span:first-child{
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+}
+
+.scroll-toolbar div.logo-toolbar span:last-child{
+  color: #FFFFFF;
+}
+
+.scroll-toolbar div.logo-toolbar:hover{
+  cursor: pointer;
+}
+
+/* Scroll-Toolbar Options */
+.scroll-toolbar ul{
+ display: flex;
+ list-style: none;
+ margin: 0;
+ flex-grow: 1;
+ align-items: center;
+ justify-content: space-evenly;
+}
+
+.scroll-toolbar ul li{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.scroll-toolbar ul li:hover{
+  cursor: pointer;
+}
+
+.scroll-toolbar ul li h6{
+  margin: 0;
+}
+
+/* Navigation Controller */
+
+/* Navigation List */
+.navigation-control ul{
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+}
+
+/* Navigation Item */
+.navigation-control ul li{
+  display: flex;
+  align-items: center;
+}
+
+.navigation-control ul li[data-item=home] i{
+  font-size: 1.2rem;
+}
+.navigation-control ul li[data-item=child]{
+  margin-top: 4px;
+}
+
+.navigation-control ul li a{
+  color: #FFFFFF;
+}
+
+.navigation-control ul li:last-child::after{
+  content: "";
+}
+
+.navigation-control ul li::after{
+  content: "\2192";
+  margin: 0 4px;
+  font-size: 0.9rem;
+  color: rgba(254, 254, 254, 0.4);
+}
+
+/* Filters */
+
+.filters a{
+  color: #FFFFFF;
+  background: #C3073F;
+  padding: 0 4px;
+  margin: 0 3px;
+  transition: 1s;
+}
+
+.filters a:hover{
+  background: #790427;
+}
+
+.filters a:focus{
+  outline: 0;
+  box-shadow: 0 0 transparent;
+}
+
+/* Wallpaper Viewer */
+
+.overlay-wallviewer{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10000;
+}
+
+.show-wallpaper{
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index: -10000;
+  padding: 20px;
+  width: 100%;
+}
+
+.show-wallpaper-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.show-wallpaper a{
+  color: #FFFFFF;
+}
+
+.show-wallpaper a:hover{
+  outline-offset: 0px;
+  box-shadow: 0 0 0;
+  color: #FFFFFF;
+}
+
+.show-wallpaper-container img{
+ max-height: 600px;
+}
+
+@media (max-width: 1024px) {
+  .show-wallpaper-container img{
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .show-wallpaper-container img{
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 425px) {
+  .show-wallpaper-container img{
+    max-width: 300px;
+  }
+}
+
+/* List Navigation */
+
+.menu-options{
+  display: flex;
+  margin-top: 10px;
+}
+
+.menu-options ul{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  list-style: none;
+}
+
+.menu-options ul li{
+   margin: 4px;
+}
+
+.menu-options a{
+  color: #FFFFFF;
+  background: #C3073F;
+  padding: 0 4px;
+}
+
+.menu-options a:focus{
+  outline-offset: 0;
+  box-shadow: 0 0 0;
+  background: #790427;
+}
+
+.menu-options i{
+  vertical-align: middle;
+  padding: 4px;
+}
+
+.menu-category{
+  transition: 1s;
+}
